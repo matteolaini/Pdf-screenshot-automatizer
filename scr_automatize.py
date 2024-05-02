@@ -154,7 +154,6 @@ class PDFScreenshotApp:
     #Convert the pdf file to images
     def __init__(self, pdf_path):
 
-        # Create a temporary folder to store the images
         self.root = tk.Tk()
         pdf = PyPDF2.PdfReader(pdf_path)
 
@@ -212,6 +211,10 @@ if __name__ == "__main__":
     folder_path = 'documents'
     screenshot_path = 'screenshots'
 
+    #If screenshots folder does not exist, create it
+    if not os.path.exists(screenshot_path):
+        os.makedirs(screenshot_path)
+
     # Get the only PDF file in the folder
     #REMEMBER: There must be only one PDF file in the folder, otherwise the script will not work
     pdf_files = [f for f in os.listdir(folder_path) if f.endswith('.pdf')]
@@ -220,9 +223,13 @@ if __name__ == "__main__":
         exit()
     pdf_file = os.path.join(folder_path, pdf_files[0])
     
-    #Delete all files in the temp_images folder
-    for file in os.listdir(tmpdir):
-        os.remove(os.path.join(tmpdir, file))
+    # Create a temporary folder to store the images, if it does not exist
+    if not os.path.exists(tmpdir):
+        os.makedirs(tmpdir)
+    else:
+        #Delete all files in the temp_images folder
+        for file in os.listdir(tmpdir):
+            os.remove(os.path.join(tmpdir, file))
 
     #Create a folder inside the screenshots folder, named after the pdf file
     screenshot_path = os.path.join(screenshot_path, pdf_files[0].split(".")[0])
