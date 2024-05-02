@@ -2,7 +2,7 @@
 
 This Python script is built to automatize screenshot taking on pdf documents.
 
-##Requirements
+## Requirements
 
 Please remember to install Python on your pc and add it to your PATH.
 
@@ -11,7 +11,7 @@ You need to install the libraries specified in the requirements file.
     pip install -r requirements.txt
 ```
 
-##How to use it
+## How to use it
 
 1. Place your pdf inside the 'documents' folder, replacing the placeholder one. Please note: this script only works if there is one exact pdf file inside the folder!
 
@@ -28,7 +28,7 @@ When you are done, close the script.
 This time, everything will be automatic. You'll find a new folder with the screenshots of the new pdf inside the 'screenshot' folder.
 
 
-##Troubleshooting
+## Troubleshooting
 
 -What if I made a mistake in taking screenshots for the first time/ I want to change coordinates?-
 
