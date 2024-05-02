@@ -3,6 +3,7 @@
 This Python script is built to automatize screenshot taking on pdf documents.
 
 **Requirements**
+
 Please remember to install Python on your pc and add it to your PATH.
 
 You need to install the libraries specified in the requirements file.
