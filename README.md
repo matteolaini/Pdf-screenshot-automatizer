@@ -30,7 +30,7 @@ This time, everything will be automatic. You'll find a new folder with the scree
 
 ## Troubleshooting
 
--What if I made a mistake in taking screenshots for the first time/ I want to change coordinates?-
+**-What if I made a mistake in taking screenshots for the first time/ I want to change coordinates?-**
 
 To solve this, just delete the 'coordinates.json' file in the folder, or remove it and store it in another place.
 
